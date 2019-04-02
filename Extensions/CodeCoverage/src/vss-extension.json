@@ -1,0 +1,51 @@
+{
+  "manifestVersion": 1,
+  "id": "vss-services-codecoverage",
+  "name": "Code Coverage",
+  "publisher": "akshayh",
+  "version": "0.0.77",
+  "public": false,
+  "description": "Code Coverage with Azure Pipelines",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "Tags": [
+    "Test Run",
+    "Run Management",
+    "Release",
+    "Release Gates",
+    "DevOps",
+    "Pipelines"
+  ],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services.Cloud"
+    }
+  ],
+  "demands": [],
+  "icons": {
+    "default": "images/codecoverage.png"
+  },
+  "files": [
+    {
+      "path": "Tasks/CodeCoverage"
+    }    
+  ],
+  "content": {
+    "details": {
+      "path": "readme.md"
+    }
+  },
+  "contributions": [
+    {
+      "id": "serviceNowchangerequests-query-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/CodeCoverage"
+      }
+    }
+  ]
+}
