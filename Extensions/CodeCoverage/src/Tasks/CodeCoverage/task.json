@@ -1,7 +1,7 @@
 ﻿{
   "id": "AF889D27-7A90-4AAB-A4D5-170AC2F2A7C6",
-  "name": "Verify  Code Coverage",
-  "friendlyName": "Code Coverage",
+  "name": "Verify Code Coverage",
+  "friendlyName": "Verify Code Coverage",
   "description": "Get Code Coverage data",
   "author": "akshayh",
   "helpMarkDown": "",
@@ -17,7 +17,7 @@
     "Minor": 1,
     "Patch": 0
   },
-  "instanceNameFormat": "Code Coverage",
+  "instanceNameFormat": "Verify Code Coverage",
   "groups": [],
   "inputs": [
     {
@@ -60,7 +60,7 @@
       "helpMarkDown": "Set the maximum threshold for line or blocks to pass the gate"
     }   
   ],
-  "dataSourceBindings": [
+  "dataSourceBindings": [   
     {
       "target": "buildId",
       "endpointId": "tfs:teamfoundation",
