@@ -21,24 +21,12 @@
   "groups": [],
   "inputs": [
     {
-      "name": "buildId",
-      "type": "pickList",
-      "label": "Artifact",
-      "required": true,
-      "defaultValue": "",
-      "properties": {
-        "DisableManageLink": "True",
-        "EditableOptions": "True"
-      },
-      "helpMarkDown": "Build Artifacts"
-    },
-    {
       "name": "module",
       "type": "string",
       "label": "Module",
       "required": true,
       "defaultValue": "",
-      "helpMarkDown": "Name of the module or dll to evaluate"
+      "helpMarkDown": "Name of the module or dll from the primary artifact to verify code coverage for"
     },
     {
       "name": "Type",
@@ -57,17 +45,8 @@
       "label": "Coverage Threshold",
       "required": true,
       "defaultValue": "",
-      "helpMarkDown": "Set the maximum threshold for line or blocks to pass the gate"
+      "helpMarkDown": "Set the maximum desired threshold for line or blocks not covered"
     }   
-  ],
-  "dataSourceBindings": [   
-    {
-      "target": "buildId",
-      "endpointId": "tfs:teamfoundation",
-      "endpointUrl": "{{endpoint.url}}/{{system.teamProject}}/_apis/build/builds?api-version=5.0",
-      "resultSelector": "jsonpath:$.value[*]",
-      "resultTemplate": "{ \"Value\" : \"{{{id}}}\", \"DisplayValue\" : \"{{{buildNumber}}} \" }"
-    }
   ],
   "execution": {
     "HttpRequest": {
@@ -77,7 +56,7 @@
         "Method": "GET",
         "Headers": "{\"Content-Type\":\"application/json\", \"Authorization\":\"Bearer $(system.accesstoken)\", \"Accept\":\"application/json\"}",
         "parameters": {
-          "BuildId":"$(buildId)"
+          "BuildId":"$(Build.buildId)"
         },
         "WaitForCompletion": "false",
         "Expression": "lt(jsonpath('$.value[0].modules[?(@.name==''$(module)'')].statistics[''$(Type)'']')[0], $(threshold))"
