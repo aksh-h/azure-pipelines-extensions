@@ -1,6 +1,6 @@
 ﻿{
   "id": "AF889D27-7A90-4AAB-A4D5-170AC2F2A7C6",
-  "name": "Verify Code Coverage",
+  "name": "VerifyCodeCoverage",
   "friendlyName": "Verify Code Coverage",
   "description": "Get Code Coverage data",
   "author": "akshayh",
@@ -52,11 +52,11 @@
     "HttpRequest": {
       "Execute": {
         "EndpointId": "",
-        "EndpointUrl": "$(system.teamFoundationCollectionUri)$(system.teamProjectId)/_apis/test/codecoverage?buildId=$(BuildId)&flags=1&api-version=5.0-preview.1",
+        "EndpointUrl": "$(system.teamFoundationCollectionUri)$(system.teamProjectId)/_apis/test/codecoverage?buildId=$(Build.BuildId)&flags=1&api-version=5.0-preview.1",
         "Method": "GET",
         "Headers": "{\"Content-Type\":\"application/json\", \"Authorization\":\"Bearer $(system.accesstoken)\", \"Accept\":\"application/json\"}",
         "parameters": {
-          "BuildId":"$(Build.buildId)"
+          "BuildId":"$(Build.BuildId)"
         },
         "WaitForCompletion": "false",
         "Expression": "lt(jsonpath('$.value[0].modules[?(@.name==''$(module)'')].statistics[''$(Type)'']')[0], $(threshold))"

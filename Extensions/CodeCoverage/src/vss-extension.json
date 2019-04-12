@@ -3,19 +3,18 @@
   "id": "vss-services-codecoverage",
   "name": "Verify Code Coverage",
   "publisher": "akshayh",
-  "version": "0.0.80",
+  "version": "0.0.4",
   "public": false,
   "description": "Code Coverage with Azure Pipelines",
   "categories": [
     "Azure Pipelines"
   ],
   "Tags": [
-    "Test Run",
-    "Run Management",
     "Release",
     "Release Gates",
     "DevOps",
-    "Pipelines"
+    "Pipelines",
+    "Code Coverage"
   ],
   "targets": [
     {
@@ -38,7 +37,7 @@
   },
   "contributions": [
     {
-      "id": "serviceNowchangerequests-query-task",
+      "id": "codecoverage-validate-gate",
       "type": "ms.vss-distributed-task.task",
       "targets": [
         "ms.vss-distributed-task.tasks"
