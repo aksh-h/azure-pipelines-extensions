@@ -3,7 +3,7 @@
   "name": "VerifyCodeCoverage",
   "friendlyName": "Verify Code Coverage",
   "description": "Get Code Coverage data",
-  "author": "akshayh",
+  "author": "Microsoft Corporation",
   "helpMarkDown": "",
   "category": "Utility",
   "visibility": [
