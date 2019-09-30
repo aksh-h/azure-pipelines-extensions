@@ -3,7 +3,7 @@
   "id": "vss-services-codecoverage",
   "name": "Verify Code Coverage",
   "publisher": "akshayh",
-  "version": "0.0.80",
+  "version": "0.0.85",
   "public": false,
   "description": "Code Coverage with Azure Pipelines",
   "categories": [
@@ -24,7 +24,7 @@
   ],
   "demands": [],
   "icons": {
-    "default": "images/codecoverage.png"
+    "default": "images/codecoverage1.png"
   },
   "files": [
     {
