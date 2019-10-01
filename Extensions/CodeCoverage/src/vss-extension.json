@@ -1,17 +1,15 @@
 {
   "manifestVersion": 1,
-  "id": "vss-services-codecoverage",
+  "id": "canarys-services-codecoverage",
   "name": "Verify Code Coverage",
-  "publisher": "akshayh",
-  "version": "0.0.85",
-  "public": false,
+  "publisher": "canarysautomationspvtltd",
+  "version": "1.8",
+  "public": true,
   "description": "Code Coverage with Azure Pipelines",
   "categories": [
     "Azure Pipelines"
   ],
   "Tags": [
-    "Test Run",
-    "Run Management",
     "Release",
     "Release Gates",
     "DevOps",
@@ -27,6 +25,26 @@
     "default": "images/codecoverage1.png"
   },
   "files": [
+    {
+      "path": "images/add-code-coverage.png",
+      "addressable": true
+    },
+    {
+      "path": "images/code-coverage-failed.png",
+      "addressable": true
+    },
+    {
+      "path": "images/code-coverage-passed.png",
+      "addressable": true
+    },
+    {
+      "path": "images/configure-code-coverage.png",
+      "addressable": true
+    },
+    {
+      "path":"images/codecoverage1.png",
+      "addressable": true
+    },
     {
       "path": "Tasks/CodeCoverage"
     }    
